@@ -1,10 +1,13 @@
 name: "Update Tag"
-description: "Update the provided tag in the GitHub repo"
+description: "Update the provided tag in the GitHub repo, optionally tag its previous sha"
 author: "Richard Simko"
 inputs:
   tag_name:
     description: "Name of the tag to create or update"
     required: true
+  previous_tag_name:
+    description: "Name of the tag referencing the previous sha"
+    required: false
 
 runs:
   using: "node12"
